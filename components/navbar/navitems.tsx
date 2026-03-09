@@ -3,11 +3,18 @@
 import { cn } from "@/lib/utils";
 import Link  from "next/link"
 import { usePathname } from "next/navigation"
+import { Label } from "../ui/label";
 
 const navItems = [
     {label: 'Home', href : '/'},
-    {label: 'Companions', href : '/companions'},
-    {label: 'My Journey', href : '/my-journey'},
+    {label: 'News', href : '/news'},
+    {label: 'Fixtures', href : '/fixtures'},
+    {label: 'Teams', href : '/teams'},
+    {label: 'Leagues', href : '/leagues'},
+    {label: 'Transfers', href : '/transfers'}
+    // {Label: 'Scores', href : '/scores'},
+    // {label: 'About', href : '/about'},
+    // {label: 'Contact', href : '/contact'}
 ]
 
 const Navitems = () => {
