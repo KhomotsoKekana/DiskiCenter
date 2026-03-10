@@ -2,35 +2,31 @@
 
 import Link from "next/link";
 import Image from "next/image";
-// import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import dynamic from "next/dynamic";
 import Navitems from "./navitems";
+
+const AuthButtons = dynamic(() => import("./auth-buttons"), { ssr: false });
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <Link href="/">
-        <div className="flex items-center gap-2.5 cursor-pointer">
+        <div className="flex items-center gap-3 cursor-pointer">
           <Image
             src="/images/logo.svg"
             alt="logo"
-            width={30}
-            height={20}
+            width={40}
+            height={28}
           />
+          <span className="text-xl font-extrabold tracking-tight">
+            diski<span className=" text-[#8eb69b]">Center</span>
+          </span>
         </div>
       </Link>
 
       <div className="flex items-center gap-8">
         <Navitems />
-
-        {/* <SignedOut>
-          <SignInButton>
-            <button className="btn-signin">Sign In</button>
-          </SignInButton>
-        </SignedOut>
-
-        <SignedIn>
-          <UserButton />
-        </SignedIn> */}
+        <AuthButtons />
       </div>
     </nav>
   );
