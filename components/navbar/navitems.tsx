@@ -8,11 +8,10 @@ import { Label } from "../ui/label";
 const navItems = [
     {label: 'Home', href : '/'},
     {label: 'News', href : '/news'},
-    {label: 'Fixtures', href : '/fixtures'},
+    {label: 'Scores', href : '/scores'},
     {label: 'Teams', href : '/teams'},
     {label: 'Leagues', href : '/leagues'},
     {label: 'Transfers', href : '/transfers'}
-    // {Label: 'Scores', href : '/scores'},
     // {label: 'About', href : '/about'},
     // {label: 'Contact', href : '/contact'}
 ]
