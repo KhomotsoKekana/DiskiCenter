@@ -276,7 +276,7 @@ export default function NewsPage() {
 
       <main style={{ background:"var(--bg)", display:"flex", flexDirection:"column", gap:28 }}>
 
-        {/* ── HERO — full image ── */}
+        {/* ── HERO section ── */}
         <section className="relative flex items-end"
           style={{ minHeight:"clamp(300px,50vw,480px)", borderRadius:24, overflow:"hidden" }}>
           <div className="absolute inset-0">
@@ -349,7 +349,7 @@ export default function NewsPage() {
                 {category !== "All" && <span style={{ width:6, height:6, borderRadius:"50%", background: filtersOpen?"#fff":"#0a1a0e", display:"inline-block", marginLeft:2 }} />}
               </button>
 
-              {/* Search — always visible */}
+              {/* Search */}
               <div className="search-box flex items-center gap-2 rounded-xl px-3 py-2.5"
                 style={{ background:"var(--surface2)", border:"1.5px solid var(--border)", minWidth:180, transition:"border-color .2s,box-shadow .2s" }}>
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--text3)" strokeWidth="2.5">
@@ -400,7 +400,7 @@ export default function NewsPage() {
           </FadeUp>
         ) : (
           <>
-            {/* Top story + side rail */}
+            {/* Top story */}
             {hero && (
               <FadeUp>
                 <div className="section-label mb-4">Top Story</div>
