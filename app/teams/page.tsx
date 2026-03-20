@@ -7,42 +7,38 @@ const G  = "#8eb69b";
 const GD = "#6a9a7f";
 
 const PSL_TEAMS = [
-  { id: "kaizer-chiefs",      name: "Kaizer Chiefs",       abbr: "KC",  city: "Johannesburg", founded: 1970, stadium: "FNB Stadium",       capacity: "94,736", trophies: 54, league: "PSL", color: "#FFD700" },
-  { id: "orlando-pirates",    name: "Orlando Pirates",      abbr: "OP",  city: "Soweto",       founded: 1937, stadium: "Orlando Stadium",    capacity: "40,000", trophies: 36, league: "PSL", color: "#000000" },
-  { id: "mamelodi-sundowns",  name: "Mamelodi Sundowns",    abbr: "MS",  city: "Pretoria",     founded: 1970, stadium: "Loftus Versfeld",    capacity: "51,762", trophies: 42, league: "PSL", color: "#FFD700" },
-  { id: "stellenbosch-fc",    name: "Stellenbosch FC",      abbr: "SF",  city: "Stellenbosch", founded: 1994, stadium: "Danie Craven",       capacity: "10,000", trophies: 2,  league: "PSL", color: "#0033A0" },
-  { id: "cape-town-city",     name: "Cape Town City FC",    abbr: "CT",  city: "Cape Town",    founded: 2016, stadium: "DHL Newlands",       capacity: "51,900", trophies: 3,  league: "PSL", color: "#00AEEF" },
-  { id: "sekhukhune-united",  name: "Sekhukhune United",    abbr: "SK",  city: "Polokwane",    founded: 2018, stadium: "Peter Mokaba",       capacity: "46,000", trophies: 1,  league: "PSL", color: "#8B0000" },
-  { id: "golden-arrows",      name: "Golden Arrows FC",     abbr: "GA",  city: "Durban",       founded: 1943, stadium: "Sugar Ray Xulu",     capacity: "10,000", trophies: 5,  league: "PSL", color: "#FFD700" },
-  { id: "richards-bay",       name: "Richards Bay FC",      abbr: "RB",  city: "Richards Bay", founded: 1999, stadium: "Umhlathuze Sports",  capacity: "10,000", trophies: 1,  league: "PSL", color: "#0000FF" },
-  { id: "chippa-united",      name: "Chippa United FC",     abbr: "CU",  city: "Gqeberha",     founded: 2010, stadium: "Nelson Mandela Bay", capacity: "46,000", trophies: 1,  league: "PSL", color: "#FF6600" },
-  { id: "ts-galaxy",          name: "TS Galaxy FC",         abbr: "TS",  city: "Mbombela",     founded: 2018, stadium: "Mbombela Stadium",   capacity: "46,000", trophies: 2,  league: "PSL", color: "#FF0000" },
-  { id: "magesi-fc",          name: "Magesi FC",            abbr: "MG",  city: "Limpopo",      founded: 2016, stadium: "Peter Mokaba",       capacity: "46,000", trophies: 1,  league: "PSL", color: "#006400" },
-  { id: "marumo-gallants",    name: "Marumo Gallants FC",   abbr: "MRG", city: "Polokwane",    founded: 2002, stadium: "Peter Mokaba",       capacity: "46,000", trophies: 2,  league: "PSL", color: "#FF8C00" },
-  { id: "polokwane-city",     name: "Polokwane City FC",    abbr: "PC",  city: "Polokwane",    founded: 2010, stadium: "Peter Mokaba",       capacity: "46,000", trophies: 1,  league: "PSL", color: "#00FF00" },
-  { id: "orbit-college",      name: "Orbit College FC",     abbr: "OC",  city: "Johannesburg", founded: 2023, stadium: "Dobsonville Stadium", capacity: "10,000", trophies: 0, league: "PSL", color: "#800080" },
-  { id: "siwelele",           name: "Siwelele FC",          abbr: "SW",  city: "Pretoria",     founded: 1994, stadium: "Lucas Moripe",       capacity: "42,000", trophies: 8,  league: "PSL", color: "#0000CD" },
-  { id: "durban-city",        name: "Durban City FC",       abbr: "DC",  city: "Durban",       founded: 2022, stadium: "Moses Mabhida",      capacity: "56,000", trophies: 0,  league: "PSL", color: "#4B0082" },
+  { name: "Mamelodi Sundowns",  abbr: "MS", city: "Pretoria",     founded: 1970, stadium: "Loftus Versfeld",       capacity: "51,762", league: "PSL", titles: 13, color: "#FFD700" },
+  { name: "Orlando Pirates",    abbr: "OP", city: "Soweto",       founded: 1937, stadium: "Orlando Stadium",       capacity: "40,000", league: "PSL", titles: 4,  color: "#000000" },
+  { name: "Kaizer Chiefs",      abbr: "KC", city: "Johannesburg", founded: 1970, stadium: "FNB Stadium",           capacity: "94,736", league: "PSL", titles: 18, color: "#FFD700" },
+  { name: "Stellenbosch FC",    abbr: "SF", city: "Stellenbosch", founded: 1994, stadium: "Danie Craven Stadium",  capacity: "10,000", league: "PSL", titles: 0,  color: "#003399" },
+  { name: "Cape Town City FC",  abbr: "CT", city: "Cape Town",    founded: 2016, stadium: "DHL Newlands",          capacity: "51,900", league: "PSL", titles: 1,  color: "#00AAFF" },
+  { name: "Golden Arrows FC",   abbr: "GA", city: "Durban",       founded: 1943, stadium: "Sugar Ray Xulu",        capacity: "10,000", league: "PSL", titles: 0,  color: "#FFFF00" },
+  { name: "Sekhukhune United",  abbr: "SK", city: "Polokwane",    founded: 2018, stadium: "Peter Mokaba Stadium",  capacity: "46,000", league: "PSL", titles: 0,  color: "#CC0000" },
+  { name: "TS Galaxy FC",       abbr: "TS", city: "Mbombela",     founded: 2018, stadium: "Mbombela Stadium",      capacity: "46,000", league: "PSL", titles: 0,  color: "#FF6600" },
+  { name: "Chippa United FC",   abbr: "CU", city: "Gqeberha",    founded: 2010, stadium: "Nelson Mandela Bay",    capacity: "46,000", league: "PSL", titles: 0,  color: "#FF0000" },
+  { name: "Royal AM FC",        abbr: "RA", city: "Durban",       founded: 2019, stadium: "King Zwelithini",       capacity: "25,000", league: "PSL", titles: 0,  color: "#8B0000" },
+  { name: "Magesi FC",          abbr: "MG", city: "Lephalale",    founded: 2021, stadium: "Peter Mokaba Stadium",  capacity: "46,000", league: "PSL", titles: 0,  color: "#006400" },
+  { name: "Richards Bay FC",    abbr: "RB", city: "Richards Bay", founded: 1999, stadium: "Umhlatuze Stadium",     capacity: "10,000", league: "PSL", titles: 0,  color: "#0000CC" },
+  { name: "Marumo Gallants",    abbr: "MR", city: "Polokwane",    founded: 2004, stadium: "Peter Mokaba Stadium",  capacity: "46,000", league: "PSL", titles: 0,  color: "#FF8C00" },
+  { name: "Polokwane City FC",  abbr: "PC", city: "Polokwane",    founded: 2009, stadium: "Peter Mokaba Stadium",  capacity: "46,000", league: "PSL", titles: 0,  color: "#008000" },
+  { name: "Siwelele FC",        abbr: "SW", city: "Pretoria",     founded: 1994, stadium: "Lucas Moripe Stadium",  capacity: "55,000", league: "PSL", titles: 5,  color: "#003399" },
+  { name: "Cape Town Spurs",    abbr: "CS", city: "Cape Town",    founded: 1999, stadium: "Athlone Stadium",       capacity: "18,000", league: "PSL", titles: 0,  color: "#003399" },
+  { name: "Durban City FC",     abbr: "DC", city: "Durban",       founded: 2023, stadium: "Moses Mabhida",         capacity: "56,000", league: "PSL", titles: 0,  color: "#FFD700" },
 ];
 
 const NFD_TEAMS = [
-  { id: "university-pretoria", name: "University of Pretoria FC", abbr: "UP",  city: "Pretoria",      founded: 1931, stadium: "Tuks Stadium",       capacity: "10,000", trophies: 2, league: "GladAfrica", color: "#003580" },
-  { id: "black-leopards",      name: "Black Leopards FC",         abbr: "BL",  city: "Thohoyandou",   founded: 1969, stadium: "Thohoyandou Stadium", capacity: "20,000", trophies: 3, league: "GladAfrica", color: "#006400" },
-  { id: "pretoria-callies",    name: "Pretoria Callies FC",       abbr: "PCA", city: "Pretoria",      founded: 1933, stadium: "Caledonian Ground",   capacity: "8,000",  trophies: 4, league: "GladAfrica", color: "#FF0000" },
-  { id: "baroka-fc",           name: "Baroka FC",                 abbr: "BAR", city: "Polokwane",     founded: 2009, stadium: "Peter Mokaba",        capacity: "46,000", trophies: 2, league: "GladAfrica", color: "#008000" },
-  { id: "hungry-lions",        name: "Hungry Lions FC",           abbr: "HL",  city: "Bloemfontein",  founded: 2007, stadium: "Goble Park",          capacity: "10,000", trophies: 1, league: "GladAfrica", color: "#FF8C00" },
-  { id: "jdr-stars",           name: "JDR Stars FC",              abbr: "JDR", city: "Pretoria",      founded: 2014, stadium: "Dobsonville Stadium", capacity: "10,000", trophies: 0, league: "GladAfrica", color: "#FFD700" },
-  { id: "cape-umoya",          name: "Cape Umoya United FC",      abbr: "CUU", city: "Cape Town",     founded: 2017, stadium: "Athlone Stadium",     capacity: "14,000", trophies: 0, league: "GladAfrica", color: "#00CED1" },
-  { id: "tshakhuma",           name: "Tshakhuma FC",              abbr: "TSH", city: "Thohoyandou",   founded: 2016, stadium: "Thohoyandou Stadium", capacity: "20,000", trophies: 0, league: "GladAfrica", color: "#800000" },
-  { id: "platinum-city",       name: "Platinum City Rovers FC",   abbr: "PCR", city: "Rustenburg",    founded: 2018, stadium: "Olympia Park",        capacity: "10,000", trophies: 0, league: "GladAfrica", color: "#C0C0C0" },
-  { id: "african-warriors",    name: "African Warriors FC",       abbr: "AW",  city: "Durban",        founded: 2015, stadium: "Chatsworth Stadium",  capacity: "15,000", trophies: 0, league: "GladAfrica", color: "#8B4513" },
-  { id: "milford-fc",          name: "Milford FC",                abbr: "MIF", city: "Cape Town",     founded: 2019, stadium: "Athlone Stadium",     capacity: "14,000", trophies: 0, league: "GladAfrica", color: "#DC143C" },
-  { id: "tornado-fc",          name: "Tornado FC",                abbr: "TOR", city: "Johannesburg",  founded: 2010, stadium: "Dobsonville Stadium", capacity: "10,000", trophies: 0, league: "GladAfrica", color: "#4169E1" },
-  { id: "upington-city",       name: "Upington City FC",          abbr: "UC",  city: "Upington",      founded: 2018, stadium: "Upington Stadium",    capacity: "5,000",  trophies: 0, league: "GladAfrica", color: "#FF4500" },
-  { id: "casric-fc",           name: "CASRIC FC",                 abbr: "CAS", city: "Cape Town",     founded: 2012, stadium: "Athlone Stadium",     capacity: "14,000", trophies: 0, league: "GladAfrica", color: "#20B2AA" },
-  { id: "venda-football",      name: "Venda Football Academy",    abbr: "VFA", city: "Thohoyandou",   founded: 2016, stadium: "Thohoyandou Stadium", capacity: "20,000", trophies: 0, league: "GladAfrica", color: "#9400D3" },
-  { id: "milano-united",       name: "Milano United FC",          abbr: "MU",  city: "Johannesburg",  founded: 2017, stadium: "Dobsonville Stadium", capacity: "10,000", trophies: 0, league: "GladAfrica", color: "#B22222" },
-  { id: "cape-town-spurs",     name: "Cape Town Spurs",           abbr: "CTS", city: "Cape Town",     founded: 1999, stadium: "Athlone Stadium",    capacity: "46,000", trophies: 2,  league: "PSL", color: "#003399" },
+  { name: "Black Leopards FC",        abbr: "BL", city: "Thohoyandou", founded: 1969, stadium: "Thohoyandou Stadium", capacity: "20,000", league: "GladAfrica", titles: 0, color: "#000000" },
+  { name: "Baroka FC",                abbr: "BK", city: "Polokwane",   founded: 2009, stadium: "Peter Mokaba",        capacity: "46,000", league: "GladAfrica", titles: 0, color: "#008000" },
+  { name: "University of Pretoria FC",abbr: "UP", city: "Pretoria",    founded: 1905, stadium: "Tuks Stadium",        capacity: "10,000", league: "GladAfrica", titles: 0, color: "#003399" },
+  { name: "Pretoria Callies FC",      abbr: "PR", city: "Pretoria",    founded: 1908, stadium: "Caledonian Stadium",  capacity: "8,000",  league: "GladAfrica", titles: 0, color: "#CC0000" },
+  { name: "JDR Stars FC",             abbr: "JD", city: "Tembisa",     founded: 2012, stadium: "Dobsonville Stadium", capacity: "12,000", league: "GladAfrica", titles: 0, color: "#FFD700" },
+  { name: "Hungry Lions FC",          abbr: "HL", city: "Bloemfontein",founded: 2014, stadium: "Mangaung Stadium",    capacity: "48,000", league: "GladAfrica", titles: 0, color: "#FF6600" },
+  { name: "Cape Umoya United FC",     abbr: "CU", city: "Cape Town",   founded: 2018, stadium: "Athlone Stadium",     capacity: "18,000", league: "GladAfrica", titles: 0, color: "#00AAFF" },
+  { name: "Tshakhuma FC",             abbr: "TK", city: "Limpopo",     founded: 2019, stadium: "Thohoyandou Stadium", capacity: "20,000", league: "GladAfrica", titles: 0, color: "#8B0000" },
+  { name: "Venda Football Academy",   abbr: "VF", city: "Venda",       founded: 2015, stadium: "Thohoyandou Stadium", capacity: "20,000", league: "GladAfrica", titles: 0, color: "#006400" },
+  { name: "Milano United FC",         abbr: "MI", city: "Johannesburg", founded: 2017, stadium: "Dobsonville Stadium",capacity: "12,000", league: "GladAfrica", titles: 0, color: "#CC0000" },
+  { name: "African Warriors FC",      abbr: "AW", city: "Durban",      founded: 2016, stadium: "Chatsworth Stadium",  capacity: "10,000", league: "GladAfrica", titles: 0, color: "#003399" },
+  { name: "Platinum City Rovers",     abbr: "PL", city: "Rustenburg",  founded: 2018, stadium: "Olympia Park",        capacity: "10,000", league: "GladAfrica", titles: 0, color: "#C0C0C0" },
 ];
 
 const ALL_TEAMS = [...PSL_TEAMS, ...NFD_TEAMS];
@@ -311,7 +307,7 @@ export default function TeamsPage() {
             <div className="hero-bottom">
               <div>
                 <h1 className="font-black leading-none text-white" style={{ fontSize:"clamp(36px,7vw,72px)", ...heroT(140) }}>
-                  Mzansi <span style={{ color:G }}>Clubs</span>
+                  SA <span style={{ color:G }}>Teams</span>
                 </h1>
                 <p className="mt-3 text-sm leading-relaxed max-w-md" style={{ ...heroT(240), color:"rgba(255,255,255,0.55)" }}>
                   Every club from the Premier Soccer League and GladAfrica Championship — stats, stadiums, and history.
